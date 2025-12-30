@@ -82,7 +82,7 @@
 			(localStorage.getItem("theme") as "light" | "dark") || "light",
 		);
 		const storedLocale = localStorage.getItem("locale");
-		if (storedLocale) updateLocale(storedLocale);
+		updateLocale(storedLocale || "zh-Hans");
 
 		Settings.instance.load();
 
